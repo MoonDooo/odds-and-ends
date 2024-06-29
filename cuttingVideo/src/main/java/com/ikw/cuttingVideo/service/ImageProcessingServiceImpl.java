@@ -29,7 +29,7 @@ public class VideoCuttingService {
 
             FFmpegBuilder builder = new FFmpegBuilder()
                     .setInput(inputFile)
-                    .overrideOutputFiles(true)
+                    .overrideOutputFiles(false)
                     .addOutput(outputPath+outputName)
                     .setStartOffset(start.getSeconds(), TimeUnit.SECONDS)
                     .setDuration(end.getSeconds(), TimeUnit.SECONDS)
