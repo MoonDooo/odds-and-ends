@@ -1,0 +1,4 @@
+ffmpeg:
+  location: C:\Users\ruddh\Documents\util\ffmpeg-2024-06-27-git-9a3bc59a38-full_build\bin\ffmpeg.exe
+output:
+  location: C:\Users\ruddh\Videos\

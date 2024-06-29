@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>영상 자르기</title>
+</head>
+<body>
+<h1>Enter Folder Names</h1>
+<form action="#" th:action="@{/cuttingFileMyVideo}" th:method="post">
+    <label for="inputFile">파일위치:</label>
+    <input type="text" id="inputFile" name="inputFile" required style="width: 600px">
+    <br>
+    <label for="output">출력파일명:</label>
+    <input type="text" id="output" name="outputFolder" required>
+    <div>
+        <label for="startHours">시작(HH:MM:SS):</label>
+        <input type="number" id="startHours" name="startHours" class="time-input" min="0" max="23" required>
+        <span class="time-separator">:</span>
+        <input type="number" id="startMinutes" name="startMinutes" class="time-input" min="0" max="59" required>
+        <span class="time-separator">:</span>
+        <input type="number" id="startSeconds" name="startSeconds" class="time-input" min="0" max="59" required>
+    </div>
+    <div>
+        <label for="endHours">끝(HH:MM:SS):</label>
+        <input type="number" id="endHours" name="endHours" class="time-input" min="0" max="23" required>
+        <span class="time-separator">:</span>
+        <input type="number" id="endMinutes" name="endMinutes" class="time-input" min="0" max="59" required>
+        <span class="time-separator">:</span>
+        <input type="number" id="endSeconds" name="endSeconds" class="time-input" min="0" max="59" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
